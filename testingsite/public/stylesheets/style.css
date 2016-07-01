@@ -1,8 +1,36 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
+  background-color: #e9e8e5;
+  text-align: center;
 }
 
 a {
-  color: #00B7FF;
+  color: #FF6262;
+  padding: 50px;
+
+}
+
+h1 {
+    color: #FF6262;
+}
+
+p {
+    color: #00d9a3;
+}
+
+form > * {
+	margin-bottom: 10px;
+}
+
+#dropdown {
+	margin-top: 10px;
+}
+
+textarea#description{
+	margin-top: 10px
+}
+
+label#description {
+	margin-top: 10px
 }
