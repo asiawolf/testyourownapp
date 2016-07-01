@@ -8,6 +8,6 @@ router.get('/', function(req, res, next) {
 });
 router.post('/', function (req, res) {
   console.log(req.body);
-  res.send("name: " + req.body.name.toString() + "\nemail: " + req.body.email.toString());
+  res.send("name: " + req.body.name.toString() + "\nemail: " + req.body.email.toString() + "\ndropdown: " + req.body.dropdown.toString());
 });
 module.exports = router;
