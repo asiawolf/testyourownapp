@@ -1,6 +1,6 @@
 casper.test.begin('a test to verify page title', 1, function(test) {
 	casper.start('http://localhost:3000/', function() {
-		this.fillSelectors('#contactForm', {
+		this.fillSelectors('form#contactForm', {
 			'input[name="name"]':    'Asia Wolf',
 			'input[name="email"]':    'asia.nicole.wolf@gmail.com',
 			'#description':   'Testing things whoooo'
