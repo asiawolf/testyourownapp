@@ -4,7 +4,7 @@ var utils = require('util');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Test' });
+  res.render('index', { title: 'Form Filling Page' });
 });
 router.post('/', function (req, res) {
   console.log(req.body);
