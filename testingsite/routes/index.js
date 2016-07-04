@@ -15,4 +15,8 @@ router.post('/', function (req, res) {
 router.get('/results', function(req, res, next){
   res.render('results', {title: 'Guestbook', results: store.users});
 });
+router.post('/clear', function(req, res){
+  store.users = [];
+  res.redirect('/');
+});
 module.exports = router;

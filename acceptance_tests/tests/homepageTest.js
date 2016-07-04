@@ -1,19 +1,22 @@
 var pages = require('../helpers/pages');
-var testusers = require('../helpers/testusers');
+var testusers = require('../helpers/test_users');
+var testsuite = require('../helpers/testsuite');
 
 casper.test.begin('a test to verify form is filled and results are displayed', 6, function(test) {
 	casper.start(pages.home, function() {
-		this.fillSelectors('form#contactForm', {
+		casper.then(function(){
+			testsuite.clearResults(casper);
+ 		});
+ 		casper.then(function(){
+			this.fillSelectors('form#contactForm', {
 			'input[name="name"]': testusers.testuser1.name,
 			'input[name="email"]': testusers.testuser1.email,
 			'#description': testusers.testuser1.description,
 			'select#dropdown': testusers.testuser1.whyHere
  		}, false);
- 		casper.then(function(){
-			this.click('#createProfile');
  		});
  		casper.then(function(){
-
+			this.click('#createProfile');
  		});
 		casper.then(function(){
 			test.assertUrlMatch('results', 'User lands on results page');

@@ -14,5 +14,10 @@
             <label for="optiongiven">Why they were here:</label><li><%= results[i].dropdown %></li>
     </div>
     <% } %>
+    <form action="/clear" method="post">
+            <div>
+            <input type="submit" id="clearButton" value="Clear Guestbook" />
+            </div>
+    </form>
   </body>
 </html>
