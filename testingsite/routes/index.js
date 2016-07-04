@@ -1,13 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var utils = require('util');
+var store = require('../store')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Form Filling Page' });
 });
 router.post('/', function (req, res) {
-  console.log(req.body);
-  res.send("name: " + req.body.name.toString() + "\nemail: " + req.body.email.toString() + "\ndropdown: " + req.body.dropdown.toString());
+  var user = {name: req.body.name, email: req.body.email, description: req.body.description, dropdown: req.body.dropdown};
+  store.users.push(user);
+  res.redirect('/results');
+});
+router.get('/results', function(req, res, next){
+  res.render('results', {title: 'Guestbook', results: store.users});
 });
 module.exports = router;
