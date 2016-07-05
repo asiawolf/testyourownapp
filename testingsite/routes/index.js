@@ -5,7 +5,7 @@ var store = require('../store')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Form Filling Page' });
+  res.render('index', { title: 'Welcome! Please fill out this form.' });
 });
 router.post('/', function (req, res) {
   var user = {name: req.body.name, email: req.body.email, description: req.body.description, dropdown: req.body.dropdown};
