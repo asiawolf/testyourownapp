@@ -8,15 +8,14 @@ body {
 a {
   color: #FF6262;
   padding: 50px;
-
 }
 
 h1 {
-    color: #FF6262;
+  color: #FF6262;
 }
 
 p {
-    color: #00d9a3;
+  color: #00d9a3;
 }
 
 form > * {

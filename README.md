@@ -1,14 +1,16 @@
-#testyourownapp
-Created my own simple app to write tests against so as to not spam websites while demonstrating that i can write tests that navigate pages and fill forms.
+# testyourownapp
 
-Pre-requisites: node, npm
+Created my own simple app to write tests against so as to not spam websites while demonstrating that I can write tests that navigate pages and fill forms.
 
-- install expressjs
+Pre-requisites: node/npm
+
+
+To start web server:
 - cd testingsite
 - npm install
 - npm start
 
 To test: 
-- install phantomjs
-- install casperjs
-- casperjs test acceptanceTests/tests/
+- cd acceptance_tests
+- npm install
+- npm test
