@@ -1,6 +1,6 @@
 # testyourownapp
 
-Created my own simple app to write tests against so as to not spam websites while demonstrating that I can write tests that navigate pages and fill forms.
+Created a simple app with a form and a results page to write tests for. 
 
 Pre-requisites: node/npm
 
