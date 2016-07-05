@@ -7,7 +7,7 @@ casper.test.begin('a test to verify form is filled and results are displayed', 5
 		utils.clearResults(casper);
  		utils.fillGuestForm(casper, users[0]);
 		
-		casper.then(function(){
+		casper.then(function() {
 			test.assertTextExists(users[0].name, 'Name of test user 1 is present on page');
 			test.assertTextExists(users[0].email, 'Email of test user 1 is present on page');
 			test.assertTextExists(users[0].description, 'Description of test user 1 is present on page');
@@ -17,7 +17,7 @@ casper.test.begin('a test to verify form is filled and results are displayed', 5
 		utils.goToHome(casper);
 		utils.fillGuestForm(casper, users[1]);
 		
-		casper.then(function(){
+		casper.then(function() {
 			test.assertTextExists(users[0].name, 'Name of test user 1 is present on page after adding user 2');
 			test.assertTextExists(users[0].email, 'Email of test user 1 is present on page after adding user 2');
 			test.assertTextExists(users[0].description, 'Description of test user 1 is present on page after adding user 2');
@@ -31,7 +31,7 @@ casper.test.begin('a test to verify form is filled and results are displayed', 5
 		utils.goToHome(casper);
 		utils.fillGuestForm(casper, users[2]);
 		
-		casper.then(function(){
+		casper.then(function() {
 			test.assertTextExists(users[0].name, 'Name of test user 1 is present on page after adding user 3');
 			test.assertTextExists(users[0].email, 'Email of test user 1 is present on page after adding user 3');
 			test.assertTextExists(users[0].description, 'Description of test user 1 is present on page after adding user 3');
@@ -49,7 +49,7 @@ casper.test.begin('a test to verify form is filled and results are displayed', 5
 		utils.goToHome(casper);
 		utils.fillGuestForm(casper, users[3]);
 		
-		casper.then(function(){
+		casper.then(function() {
 			test.assertTextExists(users[0].name, 'Name of test user 1 is present on page after adding user 4');
 			test.assertTextExists(users[0].email, 'Email of test user 1 is present on page after adding user 4');
 			test.assertTextExists(users[0].description, 'Description of test user 1 is present on page after adding user 4');
@@ -71,7 +71,7 @@ casper.test.begin('a test to verify form is filled and results are displayed', 5
 		utils.clearResults(casper);
  		utils.goToGuestbook(casper);
  		
- 		casper.then(function(){
+ 		casper.then(function() {
 			test.assertTextDoesntExist(users[0].name, 'Name of test user 1 is not present on page after results are cleared');
 			test.assertTextDoesntExist(users[1].name, 'Name of test user 2 is not present on page after results are cleared');
 			test.assertTextDoesntExist(users[2].name, 'Name of test user 3 is not present on page after results are cleared');
